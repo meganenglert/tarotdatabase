@@ -1,0 +1,12 @@
+[
+    {
+        "title": "test deck 1",
+        "artist": "test artist 1",
+        "type": "Rider-Waite-Smith"
+    },
+    {
+        "title": "test deck 2",
+        "artist": "test artist 2",
+        "type": "Tarot de Marseilles"
+    }
+]
