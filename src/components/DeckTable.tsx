@@ -10,7 +10,7 @@ interface iDeckTable {
 
 export function DeckTable({ decks }: iDeckTable): JSX.Element {
 
-    return <Row xs={1} md={4} className="g-4">
+    return <Row xs={2} md={4} className="g-4">
         {decks.map((deck) => (<Col>
             <DeckCard deck={deck}></DeckCard>
         </Col>
