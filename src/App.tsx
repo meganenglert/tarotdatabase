@@ -14,6 +14,7 @@ function App(): JSX.Element {
     <div className="App">
       <h1>DeckFinder</h1>
         <Row>
+          autodeploy works!
           <Col xs={3}><Filters></Filters></Col>
           <Col><DeckTable decks={decks}></DeckTable></Col>
       </Row>
