@@ -2,6 +2,9 @@ import { Button, Col, Modal, Row, Image, Tabs, Tab } from 'react-bootstrap';
 import { DeckInfoTabBasic } from './deckInfoTabs/DeckInfoTabBasic'
 import '../App.css';
 import { Deck } from '../interfaces/deck';
+import { DeckInfoTabPublication } from './deckInfoTabs/DeckInfoTabPublication';
+import { DeckInfoTabArt } from './deckInfoTabs/DeckInfoTabArt';
+import { DeckInfoTabPrint } from './deckInfoTabs/DeckInfoTabPrint';
 
 
 interface iDeckDetailModal {
@@ -26,10 +29,13 @@ export function DeckDetailModal({show, onHide, deck} : iDeckDetailModal): JSX.El
                             <DeckInfoTabBasic deck={deck}></DeckInfoTabBasic>
                         </Tab>
                         <Tab eventKey="art" title="Art">
-                            this deck has art! wow!
-                        </Tab>    
-                        <Tab eventKey="specs" title="Deck Specs" disabled>
-                            contact
+                            <DeckInfoTabArt deck={deck}></DeckInfoTabArt>
+                        </Tab>
+                        <Tab eventKey="print" title="Print">
+                            <DeckInfoTabPrint deck={deck}></DeckInfoTabPrint>
+                        </Tab>
+                        <Tab eventKey="publication" title="publication">
+                            <DeckInfoTabPublication deck={deck}></DeckInfoTabPublication>
                         </Tab>
                     </Tabs>
                 </Col>
