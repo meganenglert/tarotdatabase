@@ -12,13 +12,15 @@ interface iDeckDetailModal {
 }
 
 export function DeckDetailModal({show, onHide, deck} : iDeckDetailModal): JSX.Element {
-    return <Modal show={show} onHide={onHide} dialogClassName="modal-70w">
+    return <Modal show={show} 
+        onHide={onHide}
+        size="lg">
         <Modal.Header closeButton>
           <Modal.Title>{deck.title}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
             <Row>
-                <Col>
+                <Col sm={7}>
                     <Tabs defaultActiveKey="basicinfo">
                         <Tab eventKey="basicinfo" title="Basic Info">
                             <p>Artist: {deck.artist}</p>
