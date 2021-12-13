@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
 import { Button, Col, Modal, Row, Image, Tabs, Tab } from 'react-bootstrap';
+import { DeckInfoTabBasic } from './deckInfoTabs/DeckInfoTabBasic'
 import '../App.css';
 import { Deck } from '../interfaces/deck';
 
@@ -23,8 +23,7 @@ export function DeckDetailModal({show, onHide, deck} : iDeckDetailModal): JSX.El
                 <Col sm={7}>
                     <Tabs defaultActiveKey="basicinfo">
                         <Tab eventKey="basicinfo" title="Basic Info">
-                            <p>Artist: {deck.artist}</p>
-                            <p>Type: {deck.type}</p>
+                            <DeckInfoTabBasic deck={deck}></DeckInfoTabBasic>
                         </Tab>
                         <Tab eventKey="art" title="Art">
                             this deck has art! wow!
