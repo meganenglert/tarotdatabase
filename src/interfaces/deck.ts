@@ -6,5 +6,7 @@ export interface Deck {
 
 export enum deckType {
     rws = "Rider-Waite-Smith",
-    marseilles = "Tarot de Marseilles"
+    marseilles = "Tarot de Marseilles",
+    thoth = "Thoth",
+    oracle = "Oracle Cards"
 }
