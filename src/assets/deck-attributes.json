@@ -1,0 +1,147 @@
+{
+    "title": {
+      "display": "Title",
+      "type": "text",
+      "tab": "basic-info"
+    },
+    "author": {
+      "display": "Author",
+      "type": "text",
+      "tab": "basic-info"
+    },
+    "artist": {
+      "display": "Artist",
+      "type": "text",
+      "tab": "basic-info"
+    },
+    "type": {
+      "display": "Deck Type",
+      "type": "single-select",
+      "tab": "basic-info"
+    },
+    "num-cards": {
+      "display": "Number of Cards",
+      "type": "text",
+      "tab": "basic-info"
+    },
+    "guidebook": {
+      "display": "Guidebook",
+      "type": "multi-select",
+      "tab": "basic-info"
+    },
+    "genre": {
+      "display": "Genre",
+      "type": "multi-select",
+      "tab": "basic-info"
+    },
+    "minor-arcana": {
+      "display": "Minor Arcana",
+      "type": "single-select",
+      "tab": "basic-info"
+    },
+    "suit-names": {
+      "display": "Suitnames (WCSP)",
+      "type": "text",
+      "tab": "basic-info"
+    },
+    "cws": {
+      "display": "Content Warnings",
+      "type": "multi-select",
+      "tab": "basic-info"
+    },
+    "style": {
+      "display": "Art Style",
+      "type": "multi-select",
+      "tab": "art"
+    },
+    "subjects": {
+      "display": "Main Subjects",
+      "type": "multi-select",
+      "tab": "art"
+    },
+    "medium": {
+      "display": "Art Medium",
+      "type": "multi-select",
+      "tab": "art"
+    },
+    "borders": {
+      "display": "Card Borders",
+      "type": "single-select",
+      "tab": "art"
+    },
+    "palette": {
+      "display": "Color Palette",
+      "type": "single-select",
+      "tab": "art"
+    },
+    "colors": {
+      "display": "Main Colors",
+      "type": "multi-select",
+      "tab": "art"
+    },
+    "diversity": {
+      "display": "Diversity",
+      "type": "multi-select",
+      "tab": "art"
+    },
+    "nsfw": {
+      "display": "NSFW",
+      "type": "single-select",
+      "tab": "art"
+    },
+    "storage": {
+      "display": "Deck Storage",
+      "type": "multi-select",
+      "tab": "print"
+    },
+    "size": {
+      "display": "Card Size",
+      "type": "single-select",
+      "tab": "print"
+    },
+    "material": {
+      "display": "Card Material",
+      "type": "single-select",
+      "tab": "print"
+    },
+    "finish": {
+      "display": "Card Finish",
+      "type": "single-select",
+      "tab": "print"
+    },
+    "gilding": {
+      "display": "Gilding",
+      "type": "multi-select",
+      "tab": "print"
+    },
+    "publisher": {
+      "display": "Publisher",
+      "type": "text",
+      "tab": "publication"
+    },
+    "date": {
+      "display": "Publishing Date",
+      "type": "text",
+      "tab": "publication"
+    },
+    "language": {
+      "display": "Language",
+      "type": "multi-select",
+      "tab": "publication"
+    },
+    "isbn": {
+      "display": "ISBN",
+      "type": "text",
+      "tab": "publication"
+    },
+    "retailers": {
+      "display": "Retailers",
+      "type": "multi-select",
+      "tab": "publication"
+    },
+    "in-print": {
+      "display": "Availability",
+      "type": "multi-select",
+      "tab": "publication"
+    }
+  }

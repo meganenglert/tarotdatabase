@@ -1,6 +1,7 @@
 import { Table } from 'react-bootstrap';
 import '../../App.css';
 import { Deck, deckType } from '../../interfaces/deck';
+import { InfoTableRow } from './InfoTableRow';
 
 
 interface iDeckInfoTabBasic {
@@ -17,10 +18,7 @@ export function DeckInfoTabBasic({deck} : iDeckInfoTabBasic): JSX.Element {
 
     return <Table striped className="deck-info-tab">
         <tbody>
-            <tr>
-                <td>Author</td>
-                <td>-</td>
-            </tr>
+            <InfoTableRow deck={deck} title="Author" attribute="author"></InfoTableRow>
             <tr>
                 <td>Artist</td>
                 <td>{deck.artist}</td>

@@ -1,4 +1,3 @@
-import { Table } from 'react-bootstrap';
 import '../../App.css';
 import { Deck } from '../../interfaces/deck';
 
