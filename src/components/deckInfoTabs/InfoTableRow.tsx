@@ -1,53 +1,32 @@
 import '../../App.css';
-import { Deck } from '../../interfaces/deck';
+import { Attribute, fieldType } from '../../interfaces/attribute';
+
 
 
 interface iInfoTableRow {
-    deck: Deck,
-    title: string,
-    attribute: string
+    attribute: Attribute,
+    value: string,
 }
 
-export function InfoTableRow({deck, title, attribute} : iInfoTableRow): JSX.Element {
+export function InfoTableRow({attribute, value} : iInfoTableRow): JSX.Element {
 
-    const TEXT_ENTRY = [
-        "author", 
-        "artist",
-        "num-cards",
-        "suit-names"
-    ];
-    const SINGLE_SELECT = [
-        "type",
-        "guidebook",
-        "minor-arcana"
-    ];
-    const MULTI_SELECT = [
-        "genre",
-        "cws"
-    ];
-
-    var key = attribute as keyof typeof deck;
-
-    return <tr>
-        <td className="info-text field-title">{title}</td>
+    return <tr key={attribute.display}>
+        <td className="info-text field-title">{attribute.display}</td>
 
         {/* Text Entry */}
-        {TEXT_ENTRY.includes(attribute) && <td className="info-text text-entry">
-            {deck[key]}
+        {attribute.type === fieldType.text && <td className="info-text text-entry">
+            {value}
         </td>}
 
         {/* Single Select */}
-        {SINGLE_SELECT.includes(attribute) && <td className="info-text single-select">
-            {deck[key]}
+        {attribute.type === fieldType.singleSelect && <td className="info-text single-select">
+            {value}
         </td>}
 
         {/* Multi Select */}
-        {MULTI_SELECT.includes(attribute) && <td className="info-text multi-select">
-            {deck[key]}
+        {attribute.type === fieldType.multiSelect && <td className="info-text multi-select">
+            {value}
         </td>}
 
-        {!TEXT_ENTRY.includes(attribute) && !SINGLE_SELECT.includes(attribute) && !MULTI_SELECT.includes(attribute)
-            && <td>ERROR</td>
-        }
     </tr>;
 }

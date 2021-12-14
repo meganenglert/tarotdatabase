@@ -1,56 +1,33 @@
 import { Table } from 'react-bootstrap';
 import '../../App.css';
+import { Attribute, tab } from '../../interfaces/attribute';
 import { Deck, deckType } from '../../interfaces/deck';
 import { InfoTableRow } from './InfoTableRow';
 
 
 interface iDeckInfoTabBasic {
-    deck: Deck
+    deck: Deck,
+    getAttribute: (key: string) => Attribute;
 }
 
-export function DeckInfoTabBasic({deck} : iDeckInfoTabBasic): JSX.Element {
-
+export function DeckInfoTabBasic({deck, getAttribute} : iDeckInfoTabBasic): JSX.Element {
+    /*
     const NOT_TAROT = [deckType.oracle];
 
     function isTarot(): boolean {
         return !NOT_TAROT.includes(deck.type);
     }
+    */
 
     return <Table striped className="deck-info-tab">
         <tbody>
-            <InfoTableRow deck={deck} title="Author" attribute="author"></InfoTableRow>
-            <tr>
-                <td>Artist</td>
-                <td>{deck.artist}</td>
-            </tr>
-            <tr>
-                <td>Type</td>
-                <td>{deck.type}</td>
-            </tr>
-            <tr>
-                <td>Number of Cards</td>
-                <td>-</td>
-            </tr>
-            <tr>
-                <td>Guidebook</td>
-                <td>-</td>
-            </tr>
-            <tr>
-                <td>Genre</td>
-                <td>-</td>
-            </tr>
-            {isTarot() && <tr>
-                <td>Minor Arcana</td>
-                <td>-</td>
-            </tr>}
-            {isTarot() && <tr>
-                <td>Suitnames (WCSP)</td>
-                <td>pee poo dice beans</td>
-            </tr>}
-            <tr>
-                <td>Content Warnings</td>
-                <td>-</td>
-            </tr>
+            {Object.entries(deck).map(([key, value]) => {
+                var attribute: Attribute = getAttribute(key);
+                if (attribute.tab === tab.basicInfo) {
+                    return <InfoTableRow attribute={attribute} value={value}></InfoTableRow>
+                }
+                return <></>;
+            })}
         </tbody>
     </Table>;
 }

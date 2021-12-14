@@ -5,6 +5,8 @@ import { Deck } from '../interfaces/deck';
 import { DeckInfoTabPublication } from './deckInfoTabs/DeckInfoTabPublication';
 import { DeckInfoTabArt } from './deckInfoTabs/DeckInfoTabArt';
 import { DeckInfoTabPrint } from './deckInfoTabs/DeckInfoTabPrint';
+import Attributes from "../assets/deck-attributes.json";
+import { Attribute, fieldType, tab } from '../interfaces/attribute';
 
 
 interface iDeckDetailModal {
@@ -15,6 +17,16 @@ interface iDeckDetailModal {
 }
 
 export function DeckDetailModal({show, onHide, deck} : iDeckDetailModal): JSX.Element {
+    
+    const ATTRIBUTES: Record<string, Attribute> = Attributes as Record<string, Attribute>;
+
+    function getAttribute(key: string): Attribute {
+        if (Object.keys(ATTRIBUTES).includes(key)) {
+            return ATTRIBUTES[key];
+        }
+        return {"display":"KEY NOT FOUND", "type":fieldType.text, "tab":tab.basicInfo};
+    }
+
     return <Modal show={show} 
         onHide={onHide}
         size="lg">
@@ -26,7 +38,7 @@ export function DeckDetailModal({show, onHide, deck} : iDeckDetailModal): JSX.El
                 <Col sm={7}>
                     <Tabs defaultActiveKey="basicinfo">
                         <Tab eventKey="basicinfo" title="Basic Info">
-                            <DeckInfoTabBasic deck={deck}></DeckInfoTabBasic>
+                            <DeckInfoTabBasic deck={deck} getAttribute={getAttribute}></DeckInfoTabBasic>
                         </Tab>
                         <Tab eventKey="art" title="Art">
                             <DeckInfoTabArt deck={deck}></DeckInfoTabArt>
