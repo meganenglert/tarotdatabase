@@ -1,28 +1,26 @@
 import { Table } from 'react-bootstrap';
 import '../../App.css';
+import { Attribute, tab } from '../../interfaces/attribute';
 import { Deck } from '../../interfaces/deck';
+import { InfoTableRow } from './InfoTableRow';
 
 
 interface iDeckInfoTabArt {
-    deck: Deck
-
+    deck: Deck,
+    getAttribute: (key: string) => Attribute;
 }
 
-export function DeckInfoTabArt({deck} : iDeckInfoTabArt): JSX.Element {
-    return <Table>
+export function DeckInfoTabArt({deck, getAttribute} : iDeckInfoTabArt): JSX.Element {
+
+    return <Table striped className="deck-info-tab">
         <tbody>
-            <tr>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-            </tr>
+            {Object.entries(deck).map(([key, value]) => {
+                var attribute: Attribute = getAttribute(key);
+                if (attribute.tab === tab.art) {
+                    return <InfoTableRow attribute={attribute} value={value}></InfoTableRow>
+                }
+                return <></>;
+            })}
         </tbody>
     </Table>;
 }

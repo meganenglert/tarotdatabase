@@ -41,13 +41,13 @@ export function DeckDetailModal({show, onHide, deck} : iDeckDetailModal): JSX.El
                             <DeckInfoTabBasic deck={deck} getAttribute={getAttribute}></DeckInfoTabBasic>
                         </Tab>
                         <Tab eventKey="art" title="Art">
-                            <DeckInfoTabArt deck={deck}></DeckInfoTabArt>
+                            <DeckInfoTabArt deck={deck} getAttribute={getAttribute}></DeckInfoTabArt>
                         </Tab>
                         <Tab eventKey="print" title="Print">
-                            <DeckInfoTabPrint deck={deck}></DeckInfoTabPrint>
+                            <DeckInfoTabPrint deck={deck} getAttribute={getAttribute}></DeckInfoTabPrint>
                         </Tab>
-                        <Tab eventKey="publication" title="publication">
-                            <DeckInfoTabPublication deck={deck}></DeckInfoTabPublication>
+                        <Tab eventKey="publication" title="Publication">
+                            <DeckInfoTabPublication deck={deck} getAttribute={getAttribute}></DeckInfoTabPublication>
                         </Tab>
                     </Tabs>
                 </Col>

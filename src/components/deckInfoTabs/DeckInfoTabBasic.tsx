@@ -1,7 +1,7 @@
 import { Table } from 'react-bootstrap';
 import '../../App.css';
 import { Attribute, tab } from '../../interfaces/attribute';
-import { Deck, deckType } from '../../interfaces/deck';
+import { Deck } from '../../interfaces/deck';
 import { InfoTableRow } from './InfoTableRow';
 
 
