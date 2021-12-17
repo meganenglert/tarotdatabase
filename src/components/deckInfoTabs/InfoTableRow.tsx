@@ -5,7 +5,7 @@ import { Attribute, fieldType } from '../../interfaces/attribute';
 
 interface iInfoTableRow {
     attribute: Attribute,
-    value: string,
+    value: string
 }
 
 export function InfoTableRow({attribute, value} : iInfoTableRow): JSX.Element {
