@@ -2,6 +2,7 @@ export interface Attribute {
     display: string;
     type: fieldType;
     tab: tab;
+    values?: string[];
 }
 
 export enum fieldType {

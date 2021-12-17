@@ -17,7 +17,8 @@
     "type": {
       "display": "Deck Type",
       "type": "single-select",
-      "tab": "basic-info"
+      "tab": "basic-info",
+      "values": ["Rider-Waite-Smith", "Tarot de Marseilles", "Thoth", "Oracle Cards"]
     },
     "num-cards": {
       "display": "Number of Cards",

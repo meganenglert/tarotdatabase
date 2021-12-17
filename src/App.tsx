@@ -13,9 +13,9 @@ function App(): JSX.Element {
   return (
     <div className="App">
       <h1>DeckFinder</h1>
-        <Row>
-          <Col xs={3}><Filters></Filters></Col>
-          <Col><DeckTable decks={decks}></DeckTable></Col>
+      <Row>
+        <Col xs={3}><Filters></Filters></Col>
+        <Col><DeckTable decks={decks}></DeckTable></Col>
       </Row>
     </div>
   );
