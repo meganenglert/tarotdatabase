@@ -1,0 +1,30 @@
+﻿,display,type,tab
+title,Title,text,basic-info
+author,Author,text,basic-info
+artist,Artist,text,basic-info
+type,Deck Type,single-select,basic-info
+num-cards,Number of Cards,text,basic-info
+guidebook,Guidebook,multi-select,basic-info
+genre,Genre,multi-select,basic-info
+minor-arcana,Minor Arcana,single-select,basic-info
+suit-names,Suitnames (WCSP),text,basic-info
+cws,Content Warnings,multi-select,basic-info
+style,Art Style,multi-select,art
+subjects,Main Subjects,multi-select,art
+medium,Art Medium,multi-select,art
+borders,Card Borders,single-select,art
+palette,Color Palette,single-select,art
+colors,Main Colors,multi-select,art
+diversity,Diversity,multi-select,art
+nsfw,NSFW,single-select,art
+storage,Deck Storage,multi-select,print
+size,Card Size,single-select,print
+material,Card Material,single-select,print
+finish,Card Finish,single-select,print
+gilding,Gilding,multi-select,print
+publisher,Publisher,text,publication
+date,Publishing Date,text,publication
+language,Language,multi-select,publication
+isbn,ISBN,text,publication
+retailers,Retailers,multi-select,publication
+in-print,Availability,multi-select,publication
