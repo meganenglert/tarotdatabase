@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/tarotdatabase/static/css/main.da07fabd.chunk.css",
-    "main.js": "/tarotdatabase/static/js/main.c367962b.chunk.js",
-    "main.js.map": "/tarotdatabase/static/js/main.c367962b.chunk.js.map",
-    "runtime-main.js": "/tarotdatabase/static/js/runtime-main.aeb2acfd.js",
-    "runtime-main.js.map": "/tarotdatabase/static/js/runtime-main.aeb2acfd.js.map",
+    "main.css": "/tarotdatabase/static/css/main.9ca8cd7d.chunk.css",
+    "main.js": "/tarotdatabase/static/js/main.817ed7c8.chunk.js",
+    "main.js.map": "/tarotdatabase/static/js/main.817ed7c8.chunk.js.map",
+    "runtime-main.js": "/tarotdatabase/static/js/runtime-main.f3fcca45.js",
+    "runtime-main.js.map": "/tarotdatabase/static/js/runtime-main.f3fcca45.js.map",
     "static/css/2.0a9ec390.chunk.css": "/tarotdatabase/static/css/2.0a9ec390.chunk.css",
-    "static/js/2.4856e8c8.chunk.js": "/tarotdatabase/static/js/2.4856e8c8.chunk.js",
-    "static/js/2.4856e8c8.chunk.js.map": "/tarotdatabase/static/js/2.4856e8c8.chunk.js.map",
-    "static/js/3.a9dc23b9.chunk.js": "/tarotdatabase/static/js/3.a9dc23b9.chunk.js",
-    "static/js/3.a9dc23b9.chunk.js.map": "/tarotdatabase/static/js/3.a9dc23b9.chunk.js.map",
+    "static/js/2.4c864fe9.chunk.js": "/tarotdatabase/static/js/2.4c864fe9.chunk.js",
+    "static/js/2.4c864fe9.chunk.js.map": "/tarotdatabase/static/js/2.4c864fe9.chunk.js.map",
+    "static/js/3.42066a74.chunk.js": "/tarotdatabase/static/js/3.42066a74.chunk.js",
+    "static/js/3.42066a74.chunk.js.map": "/tarotdatabase/static/js/3.42066a74.chunk.js.map",
     "index.html": "/tarotdatabase/index.html",
     "static/css/2.0a9ec390.chunk.css.map": "/tarotdatabase/static/css/2.0a9ec390.chunk.css.map",
-    "static/css/main.da07fabd.chunk.css.map": "/tarotdatabase/static/css/main.da07fabd.chunk.css.map",
-    "static/js/2.4856e8c8.chunk.js.LICENSE.txt": "/tarotdatabase/static/js/2.4856e8c8.chunk.js.LICENSE.txt"
+    "static/css/main.9ca8cd7d.chunk.css.map": "/tarotdatabase/static/css/main.9ca8cd7d.chunk.css.map",
+    "static/js/2.4c864fe9.chunk.js.LICENSE.txt": "/tarotdatabase/static/js/2.4c864fe9.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.aeb2acfd.js",
+    "static/js/runtime-main.f3fcca45.js",
     "static/css/2.0a9ec390.chunk.css",
-    "static/js/2.4856e8c8.chunk.js",
-    "static/css/main.da07fabd.chunk.css",
-    "static/js/main.c367962b.chunk.js"
+    "static/js/2.4c864fe9.chunk.js",
+    "static/css/main.9ca8cd7d.chunk.css",
+    "static/js/main.817ed7c8.chunk.js"
   ]
 }
