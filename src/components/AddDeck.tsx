@@ -1,7 +1,11 @@
+import { useState } from 'react';
 import { Accordion, Button, Form, Modal, Row } from 'react-bootstrap';
 import '../App.css';
 import { Deck } from '../interfaces/deck';
-
+import { AddDeckFormField } from './AddDeckFormField';
+import DEFAULTDECK from '../assets/default-deck.json';
+import ATTRIBUTES from '../assets/deck-attributes.json';
+import { Attribute, fieldType, tab } from '../interfaces/attribute';
 
 
 interface iAddDeck {
@@ -12,6 +16,26 @@ interface iAddDeck {
 }
 
 export function AddDeck({ decks, setDecks, showAdd, setShowAdd }: iAddDeck): JSX.Element {
+
+    const attributes: Record<string, Attribute> = ATTRIBUTES as Record<string, Attribute>;
+
+    function getAttribute(key: string): Attribute {
+        if (Object.keys(ATTRIBUTES).includes(key)) {
+            return attributes[key];
+        }
+        return {"display":"KEY NOT FOUND", "type":fieldType.text, "tab":tab.basicInfo};
+    }
+
+    const [newDeck, setNewDeck] = useState<Deck>(DEFAULTDECK as Deck);
+
+    function getTab(tab: tab): object[] {
+        return Object.entries(newDeck).filter( ([key, object]) => {
+            return getAttribute(key).tab === tab;
+        })
+        .map( ([key, value]) => {
+            return <AddDeckFormField key={key} attribute={getAttribute(key)}></AddDeckFormField>;
+        });
+    }
 
     function onShow(): void {
         setShowAdd(true);
@@ -36,49 +60,25 @@ export function AddDeck({ decks, setDecks, showAdd, setShowAdd }: iAddDeck): JSX
                         <Accordion.Item eventKey="0">
                             <Accordion.Header>Basic Information</Accordion.Header>
                             <Accordion.Body>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                                commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                                cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-                                est laborum.
+                                {getTab(tab.basicInfo)}
                             </Accordion.Body>
                         </Accordion.Item>
                         <Accordion.Item eventKey="1">
                             <Accordion.Header>Art</Accordion.Header>
                             <Accordion.Body>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                                commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                                cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-                                est laborum.
+                                {getTab(tab.art)}
                             </Accordion.Body>
                         </Accordion.Item>
                         <Accordion.Item eventKey="2">
                             <Accordion.Header>Print</Accordion.Header>
                             <Accordion.Body>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                                commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                                cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-                                est laborum.
+                                {getTab(tab.print)}
                             </Accordion.Body>
                         </Accordion.Item>
                         <Accordion.Item eventKey="3">
                             <Accordion.Header>Publication</Accordion.Header>
                             <Accordion.Body>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                                commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                                cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-                                est laborum.
+                                {getTab(tab.publication)}
                             </Accordion.Body>
                         </Accordion.Item>
                     </Accordion>
