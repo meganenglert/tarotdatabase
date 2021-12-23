@@ -5,3 +5,11 @@
 #bodyBackground {
   background-color: cadetblue;
 }
+
+Button {
+  margin-top: 1em;
+}
+
+Accordion.Item Button  {
+  margin-top: 0em;
+}

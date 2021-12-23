@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { Accordion, Button, Form, Modal, Row } from 'react-bootstrap';
 import '../App.css';
 import { Deck } from '../interfaces/deck';
@@ -33,7 +33,7 @@ export function AddDeck({ decks, setDecks, showAdd, setShowAdd }: iAddDeck): JSX
             return getAttribute(key).tab === tab;
         })
         .map( ([key, value]) => {
-            return <AddDeckFormField key={key} attribute={getAttribute(key)}></AddDeckFormField>;
+            return <AddDeckFormField attributeKey={key} attribute={getAttribute(key)} handleChange={handleChange}></AddDeckFormField>;
         });
     }
 
@@ -43,6 +43,15 @@ export function AddDeck({ decks, setDecks, showAdd, setShowAdd }: iAddDeck): JSX
     function onHide(): void {
         setShowAdd(false);
     }
+
+    function submitNewDeck(ev: React.ChangeEvent<HTMLFormElement>): void {
+        ev.preventDefault();
+        setDecks([ ...decks, newDeck ]);
+    }
+
+    function handleChange(ev: React.ChangeEvent<HTMLFormElement>): void {
+        setNewDeck({ ...newDeck, [ev.target.name]: ev.target.value});
+    } 
 
     return <div>
         <div>
@@ -55,7 +64,7 @@ export function AddDeck({ decks, setDecks, showAdd, setShowAdd }: iAddDeck): JSX
                 Submit a New Deck
             </Modal.Header>
             <Modal.Body>
-                <Form>
+                <Form onSubmit={submitNewDeck}>
                     <Accordion defaultActiveKey="0">
                         <Accordion.Item eventKey="0">
                             <Accordion.Header>Basic Information</Accordion.Header>
@@ -82,6 +91,7 @@ export function AddDeck({ decks, setDecks, showAdd, setShowAdd }: iAddDeck): JSX
                             </Accordion.Body>
                         </Accordion.Item>
                     </Accordion>
+                    <div className="text-center"><Button type="submit" className="submitButton">Submit</Button></div>
                 </Form>
             </Modal.Body>
             <Modal.Footer>
@@ -89,6 +99,6 @@ export function AddDeck({ decks, setDecks, showAdd, setShowAdd }: iAddDeck): JSX
                     Close
                 </Button>
             </Modal.Footer>
-        </Modal>;
+        </Modal>
     </div>;
 }

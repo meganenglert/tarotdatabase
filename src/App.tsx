@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css';
 import DECKDATA from './assets/decks.json';
 import { Deck } from './interfaces/deck';
 import { DeckTable } from './components/DeckTable';
