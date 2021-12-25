@@ -1,148 +1,234 @@
 {
-    "title": {
-      "display": "Title",
-      "type": "text",
-      "tab": "basic-info"
-    },
-    "author": {
-      "display": "Author",
-      "type": "text",
-      "tab": "basic-info"
-    },
-    "artist": {
-      "display": "Artist",
-      "type": "text",
-      "tab": "basic-info"
-    },
-    "type": {
-      "display": "Deck Type",
-      "type": "single-select",
-      "tab": "basic-info",
-      "values": ["Rider-Waite-Smith", "Tarot de Marseilles", "Thoth", "Oracle Cards"]
-    },
-    "num-cards": {
-      "display": "Number of Cards",
-      "type": "text",
-      "tab": "basic-info"
-    },
-    "guidebook": {
-      "display": "Guidebook",
-      "type": "multi-select",
-      "tab": "basic-info"
-    },
-    "genre": {
-      "display": "Genre",
-      "type": "multi-select",
-      "tab": "basic-info"
-    },
-    "minor-arcana": {
-      "display": "Minor Arcana",
-      "type": "single-select",
-      "tab": "basic-info"
-    },
-    "suit-names": {
-      "display": "Suitnames (WCSP)",
-      "type": "text",
-      "tab": "basic-info"
-    },
-    "cws": {
-      "display": "Content Warnings",
-      "type": "multi-select",
-      "tab": "basic-info"
-    },
-    "style": {
-      "display": "Art Style",
-      "type": "multi-select",
-      "tab": "art"
-    },
-    "subjects": {
-      "display": "Main Subjects",
-      "type": "multi-select",
-      "tab": "art"
-    },
-    "medium": {
-      "display": "Art Medium",
-      "type": "multi-select",
-      "tab": "art"
-    },
-    "borders": {
-      "display": "Card Borders",
-      "type": "single-select",
-      "tab": "art"
-    },
-    "palette": {
-      "display": "Color Palette",
-      "type": "single-select",
-      "tab": "art"
-    },
-    "colors": {
-      "display": "Main Colors",
-      "type": "multi-select",
-      "tab": "art"
-    },
-    "diversity": {
-      "display": "Diversity",
-      "type": "multi-select",
-      "tab": "art"
-    },
-    "nsfw": {
-      "display": "NSFW",
-      "type": "single-select",
-      "tab": "art"
-    },
-    "storage": {
-      "display": "Deck Storage",
-      "type": "multi-select",
-      "tab": "print"
-    },
-    "size": {
-      "display": "Card Size",
-      "type": "single-select",
-      "tab": "print"
-    },
-    "material": {
-      "display": "Card Material",
-      "type": "single-select",
-      "tab": "print"
-    },
-    "finish": {
-      "display": "Card Finish",
-      "type": "single-select",
-      "tab": "print"
-    },
-    "gilding": {
-      "display": "Gilding",
-      "type": "multi-select",
-      "tab": "print"
-    },
-    "publisher": {
-      "display": "Publisher",
-      "type": "text",
-      "tab": "publication"
-    },
-    "date": {
-      "display": "Publishing Date",
-      "type": "text",
-      "tab": "publication"
-    },
-    "language": {
-      "display": "Language",
-      "type": "multi-select",
-      "tab": "publication"
-    },
-    "isbn": {
-      "display": "ISBN",
-      "type": "text",
-      "tab": "publication"
-    },
-    "retailers": {
-      "display": "Retailers",
-      "type": "multi-select",
-      "tab": "publication"
-    },
-    "in-print": {
-      "display": "Availability",
-      "type": "multi-select",
-      "tab": "publication"
-    }
+  "title": {
+    "attribute": "title",
+    "display": "Title",
+    "type": "text",
+    "tab": "basic-info",
+    "default": "Modern Witch Tarot",
+    "values": ""
+  },
+  "author": {
+    "attribute": "author",
+    "display": "Author",
+    "type": "text",
+    "tab": "basic-info",
+    "default": "Lisa Sterle",
+    "values": ""
+  },
+  "artist": {
+    "attribute": "artist",
+    "display": "Artist",
+    "type": "text",
+    "tab": "basic-info",
+    "default": "Lisa Sterle",
+    "values": ""
+  },
+  "type": {
+    "attribute": "type",
+    "display": "Deck Type",
+    "type": "single-select",
+    "tab": "basic-info",
+    "default": "Rider-Waite-Smith",
+    "values": ["Rider-Waite-Smith", "Tarot de Marseilles", "Thoth", "Oracle"]
+  },
+  "num-cards": {
+    "attribute": "num-cards",
+    "display": "Number of Cards",
+    "type": "text",
+    "tab": "basic-info",
+    "default": "78",
+    "values": ""
+  },
+  "guidebook": {
+    "attribute": "guidebook",
+    "display": "Guidebook",
+    "type": "multi-select",
+    "tab": "basic-info",
+    "default": "Included",
+    "values": ["Included", "Available (Paid)", "Available (Free)", "Unofficial Guide", "None"]
+  },
+  "genre": {
+    "attribute": "genre",
+    "display": "Genre",
+    "type": "multi-select",
+    "tab": "basic-info",
+    "default": "Contemporary",
+    "values": ["Abstract", "Traditional RWS", "Contemporary", "Fantasy", "Horror", "Science Fiction"]
+  },
+  "minor-arcana": {
+    "attribute": "minor-arcana",
+    "display": "Minor Arcana",
+    "type": "single-select",
+    "tab": "basic-info",
+    "default": "Full Art",
+    "values": ["Full Art", "Some Art", "Pip Cards", "N/A"]
+  },
+  "suit-names": {
+    "attribute": "suit-names",
+    "display": "Suitnames (WCSP)",
+    "type": "text",
+    "tab": "basic-info",
+    "default": "Wands, Cups, Swords, Pentacles",
+    "values": ""
+  },
+  "cws": {
+    "attribute": "cws",
+    "display": "Content Warnings",
+    "type": "multi-select",
+    "tab": "basic-info",
+    "default": "",
+    "values": ["Blood/Gore", "Sexual Assault", "Animal Cruelty/Death", "Self Harm", "Suicide", "Eating Disorders"]
+  },
+  "style": {
+    "attribute": "style",
+    "display": "Art Style",
+    "type": "multi-select",
+    "tab": "art",
+    "default": "",
+    "values": ["Abstract", "Hand-drawn", "Vintage", "Traditional Tarot", "Surrealist"]
+  },
+  "subjects": {
+    "attribute": "subjects",
+    "display": "Main Subjects",
+    "type": "multi-select",
+    "tab": "art",
+    "default": "",
+    "values": ["Animals", "Children", "Crafting", "Flowers", "Ghosts", "Herbalism", "Licensed Content", "People", "Plants", "Space", "Technology", "Tattoos"]
+  },
+  "medium": {
+    "attribute": "medium",
+    "display": "Art Medium",
+    "type": "multi-select",
+    "tab": "art",
+    "default": "",
+    "values": ["Graphic Design", "Ink Drawing", "Needlepoint", "Painting", "Pencil Sketch", "Watercolor", "Photography"]
+  },
+  "borders": {
+    "attribute": "borders",
+    "display": "Card Borders",
+    "type": "single-select",
+    "tab": "art",
+    "default": "",
+    "values": ["Bordered", "Borderless"]
+  },
+  "palette": {
+    "attribute": "palette",
+    "display": "Color Palette",
+    "type": "single-select",
+    "tab": "art",
+    "default": "",
+    "values": ["Black and White", "Warm", "Cool", "Earthy", "Pastel", "Muted", "Dark", "Bright"]
+  },
+  "colors": {
+    "attribute": "colors",
+    "display": "Main Colors",
+    "type": "multi-select",
+    "tab": "art",
+    "default": "",
+    "values": ["Red", "Orange", "Yellow", "Green", "Blue", "Purple", "White", "Gray", "Black", "Silver", "Gold", "Brown"]
+  },
+  "diversity": {
+    "attribute": "diversity",
+    "display": "Diversity",
+    "type": "multi-select",
+    "tab": "art",
+    "default": "",
+    "values": ["Black Representation", "Latinx Representation", "Asian Representation", "Non-Binary Representation", "Transgender Representation", "Woman Representation", "Gay Representation", "Lesbian Representation", "Bisexual Representation"]
+  },
+  "nsfw": {
+    "attribute": "nsfw",
+    "display": "NSFW",
+    "type": "multi-select",
+    "tab": "art",
+    "default": "",
+    "values": ["Nudity", "Sex", "Violence", "Gore", "SFW"]
+  },
+  "storage": {
+    "attribute": "storage",
+    "display": "Deck Storage",
+    "type": "multi-select",
+    "tab": "print",
+    "default": "",
+    "values": ["Box", "Bag", "Tin", "None"]
+  },
+  "size": {
+    "attribute": "size",
+    "display": "Card Size",
+    "type": "single-select",
+    "tab": "print",
+    "default": "",
+    "values": ["Mini", "Playing Cards", "Standard Tarot", "Large"]
+  },
+  "material": {
+    "attribute": "material",
+    "display": "Card Material",
+    "type": "single-select",
+    "tab": "print",
+    "default": "",
+    "values": ["Cardstock", "Plastic"]
+  },
+  "finish": {
+    "attribute": "finish",
+    "display": "Card Finish",
+    "type": "single-select",
+    "tab": "print",
+    "default": "",
+    "values": ["Glossy", "Matte", "Linen"]
+  },
+  "gilding": {
+    "attribute": "gilding",
+    "display": "Gilding",
+    "type": "multi-select",
+    "tab": "print",
+    "default": "",
+    "values": ["Card Back", "Card Front", "Card Edge"]
+  },
+  "publisher": {
+    "attribute": "publisher",
+    "display": "Publisher",
+    "type": "text",
+    "tab": "publication",
+    "default": "Sterling Ethos",
+    "values": ""
+  },
+  "date": {
+    "attribute": "date",
+    "display": "Publishing Date",
+    "type": "text",
+    "tab": "publication",
+    "default": "November 5, 2019",
+    "values": ""
+  },
+  "language": {
+    "attribute": "language",
+    "display": "Language",
+    "type": "multi-select",
+    "tab": "publication",
+    "default": "English",
+    "values": ["English", "Afrikaans", "Albanian", "Arabic", "Armenian", "Basque", "Bengali", "Bulgarian", "Catalan", "Chinese (Mandarin)", "Croatian", "Czech", "Danish", "Dutch", "English", "Estonian", "Fiji", "Finnish", "French", "Georgian", "German", "Greek", "Gujarati", "Hebrew", "Hindi", "Hungarian", "Icelandic", "Irish", "Italian", "Japanese", "Javanese", "Korean", "Latin", "Latvian", "Lithuanian", "Macedonian", "Malay", "Malayalam", "Maltese", "Maori", "Marathi", "Mongolian", "Nepali", "Norwegian", "Persian", "Polish", "Portuguese", "Punjabi", "Quechua", "Romanian", "Russian", "Samoan", "Serbian", "Slovak", "Slovenian", "Spanish", "Swahili", "Swedish", "Tamil", "Tatar", "Telugu", "Thai", "Tibetan", "Tonga", "Turkish", "Ukranian", "Urdu", "Uzbek", "Vietnamese", "Welsh", "Xhosa"]
+  },
+  "isbn": {
+    "attribute": "isbn",
+    "display": "ISBN",
+    "type": "text",
+    "tab": "publication",
+    "default": "978-1454938682",
+    "values": ""
+  },
+  "retailers": {
+    "attribute": "retailers",
+    "display": "Retailers",
+    "type": "multi-select",
+    "tab": "publication",
+    "default": "",
+    "values": ["Artist's Website", "Etsy", "Amazon", "Target", "Barnes and Noble", "Online Tarot Retailer", "Other In-Person Retailer"]
+  },
+  "in-print": {
+    "attribute": "in-print",
+    "display": "Availability",
+    "type": "multi-select",
+    "tab": "publication",
+    "default": "",
+    "values": ["In-Print", "Pre-Print", "Between Prints", "Out of Print"]
   }
+}

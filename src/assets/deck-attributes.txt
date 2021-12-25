@@ -1,0 +1,30 @@
+	display	type	tab	default	values
+title	Title	text	basic-info	Modern Witch Tarot	
+author	Author	text	basic-info	Lisa Sterle	
+artist	Artist	text	basic-info	Lisa Sterle	
+type	Deck Type	single-select	basic-info	Rider-Waite-Smith	"[""Rider-Waite-Smith"", ""Tarot de Marseilles"", ""Thoth"", ""Oracle""]"
+num-cards	Number of Cards	text	basic-info	78	
+guidebook	Guidebook	multi-select	basic-info	Included	"[""Included"", ""Available (Paid)"", ""Available (Free)"", ""Unofficial Guide"", ""None""]"
+genre	Genre	multi-select	basic-info	Contemporary	"[""Abstract"", ""Traditional RWS"", ""Fantasy"", ""Horror"", ""Science Fiction""]"
+minor-arcana	Minor Arcana	single-select	basic-info	Full Art	"[""Full Art"", ""Some Art"", ""Pip Cards"", ""N/A""]"
+suit-names	Suitnames (WCSP)	text	basic-info	"Wands, Cups, Swords, Pentacles"	
+cws	Content Warnings	multi-select	basic-info		"[""Blood/Gore"", ""Sexual Assault"", ""Animal Cruelty/Death"", ""Self Harm"", ""Suicide"", ""Eating Disorders""]"
+style	Art Style	multi-select	art		"[""Abstract"", ""Hand-drawn"", ""Vintage"", ""Traditional Tarot"", ""Surrealist""]"
+subjects	Main Subjects	multi-select	art		"[""Animals"", ""Children"", ""Crafting"", ""Flowers"", ""Ghosts"", ""Herbalism"", ""Licensed Content"", ""People"", ""Plants"", ""Space"", ""Technology"", ""Tattoos""]"
+medium	Art Medium	multi-select	art		"[""Graphic Design"", ""Ink Drawing"", ""Needlepoint"", ""Painting"", ""Pencil Sketch"", ""Watercolor"", ""Photography""]"
+borders	Card Borders	single-select	art		"[""Bordered"", ""Borderless""]"
+palette	Color Palette	single-select	art		"[""Black and White"", ""Warm"", ""Cool"", ""Earthy"", ""Pastel"", ""Muted"", ""Dark"", ""Bright""] "
+colors	Main Colors	multi-select	art		"[""Red"", ""Orange"", ""Yellow"", ""Green"", ""Blue"", ""Purple"", ""White"", ""Gray"", ""Black"", ""Silver"", ""Gold"", ""Brown""]"
+diversity	Diversity	multi-select	art		"[""Black Representation"", ""Latinx Representation"", ""Asian Representation"", ""Non-Binary Representation"", ""Transgender Representation"", ""Woman Representation"", ""Gay Representation"", ""Lesbian Representation"", ""Bisexual Representation""]"
+nsfw	NSFW	multi-select	art		"[""Nudity"", ""Sex"", ""Violence"", ""Gore"", ""SFW""]"
+storage	Deck Storage	multi-select	print		"[""Box"", ""Bag"", ""Tin"", ""None""]"
+size	Card Size	single-select	print		"[""Mini"", ""Playing Cards"", ""Standard Tarot"", ""Large""]"
+material	Card Material	single-select	print		"[""Cardstock"", ""Plastic""]"
+finish	Card Finish	single-select	print		"[""Glossy"", ""Matte"", ""Linen""]"
+gilding	Gilding	multi-select	print		"[""Card Back"", ""Card Front"", ""Card Edge""]"
+publisher	Publisher	text	publication	Sterling Ethos	
+date	Publishing Date	text	publication	5-Nov-19	
+language	Language	multi-select	publication	English	"[""English"", ""Afrikaans"", ""Albanian"", ""Arabic"", ""Armenian"", ""Basque"", ""Bengali"", ""Bulgarian"", ""Catalan"", ""Chinese (Mandarin)"", ""Croatian"", ""Czech"", ""Danish"", ""Dutch"", ""English"", ""Estonian"", ""Fiji"", ""Finnish"", ""French"", ""Georgian"", ""German"", ""Greek"", ""Gujarati"", ""Hebrew"", ""Hindi"", ""Hungarian"", ""Icelandic"", ""Irish"", ""Italian"", ""Japanese"", ""Javanese"", ""Korean"", ""Latin"", ""Latvian"", ""Lithuanian"", ""Macedonian"", ""Malay"", ""Malayalam"", ""Maltese"", ""Maori"", ""Marathi"", ""Mongolian"", ""Nepali"", ""Norwegian"", ""Persian"", ""Polish"", ""Portuguese"", ""Punjabi"", ""Quechua"", ""Romanian"", ""Russian"", ""Samoan"", ""Serbian"", ""Slovak"", ""Slovenian"", ""Spanish"", ""Swahili"", ""Swedish"", ""Tamil"", ""Tatar"", ""Telugu"", ""Thai"", ""Tibetan"", ""Tonga"", ""Turkish"", ""Ukranian"", ""Urdu"", ""Uzbek"", ""Vietnamese"", ""Welsh"", ""Xhosa""]"
+isbn	ISBN	text	publication	978-1454938682	
+retailers	Retailers	multi-select	publication		"[""Artist's Website"", ""Etsy"", ""Amazon"", ""Target"", ""Barnes and Noble"", ""Online Tarot Retailer"", ""Other In-Person Retailer""]"
+in-print	Availability	multi-select	publication		"[""In-Print"", ""Pre-Print"", ""Between Prints"", ""Out of Print""]"
