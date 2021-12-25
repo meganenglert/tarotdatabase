@@ -4,21 +4,24 @@
     "display": "Title",
     "type": "text",
     "tab": "basic-info",
-    "default": "Modern Witch Tarot"
+    "default": "Modern Witch Tarot",
+    "values": []
   },
   "author": {
     "attribute": "author",
     "display": "Author",
     "type": "text",
     "tab": "basic-info",
-    "default": "Lisa Sterle"
+    "default": "Lisa Sterle",
+    "values": []
   },
   "artist": {
     "attribute": "artist",
     "display": "Artist",
     "type": "text",
     "tab": "basic-info",
-    "default": "Lisa Sterle"
+    "default": "Lisa Sterle",
+    "values": []
   },
   "type": {
     "attribute": "type",
@@ -39,7 +42,8 @@
     "display": "Number of Cards",
     "type": "text",
     "tab": "basic-info",
-    "default": "78"
+    "default": "78",
+    "values": []
   },
   "guidebook": {
     "attribute": "guidebook",
@@ -89,7 +93,8 @@
     "display": "Suitnames (WCSP)",
     "type": "text",
     "tab": "basic-info",
-    "default": "Wands, Cups, Swords, Pentacles"
+    "default": "Wands, Cups, Swords, Pentacles",
+    "values": []
   },
   "cws": {
     "attribute": "cws",
@@ -309,14 +314,16 @@
     "display": "Publisher",
     "type": "text",
     "tab": "publication",
-    "default": "Sterling Ethos"
+    "default": "Sterling Ethos",
+    "values": []
   },
   "date": {
     "attribute": "date",
     "display": "Publishing Date",
     "type": "date",
     "tab": "publication",
-    "default": "November 5, 2019"
+    "default": "November 5, 2019",
+    "values": []
   },
   "language": {
     "attribute": "language",
@@ -403,7 +410,8 @@
     "display": "ISBN",
     "type": "text",
     "tab": "publication",
-    "default": "978-1454938682"
+    "default": "978-1454938682",
+    "values": []
   },
   "retailers": {
     "attribute": "retailers",

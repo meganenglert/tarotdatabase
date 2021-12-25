@@ -24,7 +24,7 @@ export function DeckDetailModal({show, onHide, deck} : iDeckDetailModal): JSX.El
         if (Object.keys(ATTRIBUTES).includes(key)) {
             return ATTRIBUTES[key];
         }
-        return {"attribute":"ERROR", "display":"KEY NOT FOUND", "type":fieldType.text, "tab":tab.basicInfo};
+        return {"attribute":"ERROR", "display":"KEY NOT FOUND", "type":fieldType.text, "tab":tab.basicInfo, "default":"", "values":[]};
     }
 
     return <Modal show={show} 

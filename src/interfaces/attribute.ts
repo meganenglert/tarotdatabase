@@ -4,7 +4,7 @@ export interface Attribute {
     type: fieldType;
     tab: tab;
     default?: string;
-    values?: string[];
+    values: string[];
 }
 
 export enum fieldType {

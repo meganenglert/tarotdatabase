@@ -23,17 +23,17 @@ export function AddDeck({ decks, setDecks, showAdd, setShowAdd }: iAddDeck): JSX
         if (Object.keys(ATTRIBUTES).includes(key)) {
             return attributes[key];
         }
-        return {"attribute":"ERROR", "display":"KEY NOT FOUND", "type":fieldType.text, "tab":tab.basicInfo};
+        return {"attribute":"ERROR", "display":"KEY NOT FOUND", "type":fieldType.text, "tab":tab.basicInfo, "default":"", "values":[]};
     }
 
     const [newDeck, setNewDeck] = useState<Deck>(DEFAULTDECK as Deck);
 
     function getTab(tab: tab): object[] {
-        return Object.entries(newDeck).filter( ([key, object]) => {
+        return Object.keys(newDeck).filter( (key) => {
             return getAttribute(key).tab === tab;
         })
-        .map( ([key, value]) => {
-            return <AddDeckFormField attributeKey={key} attribute={getAttribute(key)} handleChange={handleChange}></AddDeckFormField>;
+        .map( (key) => {
+            return <AddDeckFormField attribute={getAttribute(key)} handleChange={handleChange}></AddDeckFormField>;
         });
     }
 
