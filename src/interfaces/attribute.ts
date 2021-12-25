@@ -3,7 +3,7 @@ export interface Attribute {
     display: string;
     type: fieldType;
     tab: tab;
-    default?: string;
+    default: string;
     values: string[];
 }
 
