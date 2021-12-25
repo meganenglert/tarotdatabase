@@ -3,8 +3,8 @@ export interface Attribute {
     display: string;
     type: fieldType;
     tab: tab;
-    default: string;
-    values: string[];
+    default?: string;
+    values?: string[];
 }
 
 export enum fieldType {

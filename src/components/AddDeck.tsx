@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Accordion, Button, Form, Modal, Row } from 'react-bootstrap';
+import { Accordion, Button, Form, Modal } from 'react-bootstrap';
 import '../App.css';
 import { Deck } from '../interfaces/deck';
 import { AddDeckFormField } from './AddDeckFormField';
@@ -23,7 +23,7 @@ export function AddDeck({ decks, setDecks, showAdd, setShowAdd }: iAddDeck): JSX
         if (Object.keys(ATTRIBUTES).includes(key)) {
             return attributes[key];
         }
-        return {"display":"KEY NOT FOUND", "type":fieldType.text, "tab":tab.basicInfo};
+        return {"attribute":"ERROR", "display":"KEY NOT FOUND", "type":fieldType.text, "tab":tab.basicInfo};
     }
 
     const [newDeck, setNewDeck] = useState<Deck>(DEFAULTDECK as Deck);
