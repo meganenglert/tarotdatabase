@@ -1,13 +1,20 @@
 import { Col, Form, Row } from "react-bootstrap";
 import "../App.css";
 import { Attribute, fieldType } from "../interfaces/attribute";
+import { useState } from "react";
 
 interface addDeckFormField {
     attribute: Attribute,
     handleChange: (ev: React.ChangeEvent<HTMLFormElement>) => void
 }
 
+interface Item {
+    id: string,
+    name: string
+}
+
 export function AddDeckFormField({ attribute, handleChange }: addDeckFormField): JSX.Element {
+
     return <div>
         {attribute.type === fieldType.text &&
             <Form.Group as={Row} className="mb-3" controlId={attribute.attribute} onChange={handleChange}>
