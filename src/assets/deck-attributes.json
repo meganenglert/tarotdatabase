@@ -194,7 +194,7 @@
   "date": {
     "attribute": "date",
     "display": "Publishing Date",
-    "type": "text",
+    "type": "date",
     "tab": "publication",
     "default": "November 5, 2019",
     "values": ""
