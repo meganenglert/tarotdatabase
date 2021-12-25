@@ -27,6 +27,7 @@
     "tab": "basic-info",
     "default": "Rider-Waite-Smith",
     "values": [
+      "Select Deck Type",
       "Rider-Waite-Smith",
       "Tarot de Marseilles",
       "Thoth",
@@ -76,13 +77,14 @@
     "tab": "basic-info",
     "default": "Full Art",
     "values": [
+      "Select Minor Arcana Type",
       "Full Art",
       "Some Art",
       "Pip Cards",
       "N/A"
     ]
   },
-  "suit-names": {
+  "suitnames": {
     "attribute": "suit-names",
     "display": "Suitnames (WCSP)",
     "type": "text",
@@ -162,6 +164,7 @@
     "tab": "art",
     "default": "",
     "values": [
+      "Select Card Borders",
       "Bordered",
       "Borderless"
     ]
@@ -173,6 +176,7 @@
     "tab": "art",
     "default": "",
     "values": [
+      "Select Color Palette",
       "Black and White",
       "Warm",
       "Cool",
@@ -229,6 +233,7 @@
     "tab": "art",
     "default": "",
     "values": [
+      "Not Specified",
       "SFW",
       "Nudity",
       "Sex"
@@ -254,6 +259,7 @@
     "tab": "print",
     "default": "",
     "values": [
+      "Select Card Size",
       "Mini",
       "Playing Cards",
       "Standard Tarot",
@@ -267,6 +273,7 @@
     "tab": "print",
     "default": "",
     "values": [
+      "Select Card Material",
       "Cardstock",
       "Plastic"
     ]
@@ -278,6 +285,7 @@
     "tab": "print",
     "default": "",
     "values": [
+      "Select Card Finish",
       "Glossy",
       "Matte",
       "Linen"
