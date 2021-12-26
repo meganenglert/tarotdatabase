@@ -1,16 +1,16 @@
-import { useState } from 'react';
 import { Col, Form, Row } from "react-bootstrap";
 import "../App.css";
 import { Attribute, fieldType } from "../interfaces/attribute";
-import Select from "react-select";
+import { useState } from "react";
 
 interface addDeckFormField {
     attribute: Attribute,
     handleChange: (ev: React.ChangeEvent<HTMLFormElement>) => void
 }
-interface Option {
-    readonly value: string,
-    readonly label: string
+
+interface Item {
+    id: string,
+    name: string
 }
 
 export function AddDeckFormField({ attribute, handleChange }: addDeckFormField): JSX.Element {
@@ -40,17 +40,5 @@ export function AddDeckFormField({ attribute, handleChange }: addDeckFormField):
                 </Col>
             </Form.Group>
         }
-        {attribute.type === fieldType.multiSelect &&
-        <Select
-            defaultValue={[]}
-            isMulti
-            name={attribute.attribute}
-            options={attribute.values.map(value => {
-                return {value: value, label: value};
-            }) as readonly Option[]}
-            className="basic-multi-select"
-            classNamePrefix="select"
-          />
-        }
-        </div>;
+    </div>;
 }
