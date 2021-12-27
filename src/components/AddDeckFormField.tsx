@@ -1,7 +1,8 @@
 import { Col, Form, Row } from "react-bootstrap";
 import "../App.css";
 import { Attribute, fieldType } from "../interfaces/attribute";
-import { useState } from "react";
+import ReactHookSelect from "react-hook-select";
+import "react-hook-select/dist/styles.scss";
 
 interface addDeckFormField {
     attribute: Attribute,
@@ -39,6 +40,22 @@ export function AddDeckFormField({ attribute, handleChange }: addDeckFormField):
                     </Form.Select>
                 </Col>
             </Form.Group>
+        }
+        {attribute.type === fieldType.multiSelect &&
+            <ReactHookSelect
+                label="select"
+                enableMultiple={true}
+                enableSearch={false}
+                placeholder={"choose option"}
+                defaultValue={[]}
+                options={[
+                    { label: "Group A", value: "Group A", group: true },
+                    { label: "a", value: "a" },
+                    { label: "Group B", value: "Group B", group: true },
+                    { label: "b", value: "b" },
+                ]}
+                getValue={() => {}}
+            />
         }
     </div>;
 }
