@@ -14,12 +14,11 @@ export function DeckInfoTabPublication({deck, getAttribute} : iDeckInfoTabPublic
 
     return <Table striped className="deck-info-tab">
         <tbody>
-            {Object.entries(deck).map(([key, value]) => {
+            {Object.entries(deck).filter(([key, value]) => {
+                return getAttribute(key).tab === tab.publication;
+            }).map(([key, value]) => {
                 var attribute: Attribute = getAttribute(key);
-                if (attribute.tab === tab.publication) {
-                    return <InfoTableRow attribute={attribute} value={value}></InfoTableRow>
-                }
-                return <></>;
+                return <InfoTableRow key={attribute.attribute} attribute={attribute} value={value}></InfoTableRow>
             })}
         </tbody>
     </Table>;

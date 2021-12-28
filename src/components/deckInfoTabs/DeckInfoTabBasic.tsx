@@ -21,12 +21,11 @@ export function DeckInfoTabBasic({deck, getAttribute} : iDeckInfoTabBasic): JSX.
 
     return <Table striped className="deck-info-tab">
         <tbody>
-            {Object.entries(deck).map(([key, value]) => {
+            {Object.entries(deck).filter(([key, value]) => {
+                return getAttribute(key).tab === tab.basicInfo;
+            }).map(([key, value]) => {
                 var attribute: Attribute = getAttribute(key);
-                if (attribute.tab === tab.basicInfo) {
-                    return <InfoTableRow attribute={attribute} value={value}></InfoTableRow>
-                }
-                return <></>;
+                return <InfoTableRow key={attribute.attribute} attribute={attribute} value={value}></InfoTableRow>
             })}
         </tbody>
     </Table>;

@@ -12,7 +12,7 @@ interface addDeckFormField {
 
 export function AddDeckFormField({ attribute, handleChange, handleChangeMulti }: addDeckFormField): JSX.Element {
 
-    return <div>
+    return <div key={attribute.attribute}>
         {attribute.type === fieldType.text &&
             <Form.Group as={Row} className="mb-3 align-items-center not-multi-row" controlId={attribute.attribute} onChange={handleChange}>
                 <Form.Label column sm="2">
@@ -31,7 +31,7 @@ export function AddDeckFormField({ attribute, handleChange, handleChangeMulti }:
                 <Col sm="10">
                     <Form.Select aria-label={attribute.attribute + "Select"}>
                         {attribute.values.map(valueName => {
-                            return <option value={valueName}>{valueName}</option>;
+                            return <option key={valueName} value={valueName}>{valueName}</option>;
                         })}
                     </Form.Select>
                 </Col>

@@ -33,7 +33,7 @@ export function AddDeck({ decks, setDecks, showAdd, setShowAdd }: iAddDeck): JSX
             return getAttribute(key).tab === tab;
         })
         .map( (key) => {
-            return <AddDeckFormField attribute={getAttribute(key)} handleChange={handleChange} handleChangeMulti={handleChangeMulti}></AddDeckFormField>;
+            return <AddDeckFormField key={key} attribute={getAttribute(key)} handleChange={handleChange} handleChangeMulti={handleChangeMulti}></AddDeckFormField>;
         });
     }
 
