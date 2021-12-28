@@ -6,10 +6,11 @@ import "../App.css";
 
 interface addDeckFormField {
     attribute: Attribute,
-    handleChange: (ev: React.ChangeEvent<HTMLFormElement>) => void
+    handleChange: (ev: React.ChangeEvent<HTMLFormElement>) => void,
+    handleChangeMulti: (attr: string, values: string[]) => void
 }
 
-export function AddDeckFormField({ attribute, handleChange }: addDeckFormField): JSX.Element {
+export function AddDeckFormField({ attribute, handleChange, handleChangeMulti }: addDeckFormField): JSX.Element {
 
     return <div>
         {attribute.type === fieldType.text &&
@@ -44,13 +45,13 @@ export function AddDeckFormField({ attribute, handleChange }: addDeckFormField):
                 <Col sm="10" className="multiselect">
                     <ReactHookSelect
                         enableMultiple={true}
-                        enableSearch={false}
+                        enableSearch={true}
                         placeholder={"Choose " + attribute.display}
                         defaultValue={[]}
                         options={attribute.values.map(value => {
                             return { label: value, value: value }
                         })}
-                        getValue={() => { }}
+                        getValue={(values) => { handleChangeMulti(attribute.attribute, values)}}
                     />
                 </Col>
             </Row>
