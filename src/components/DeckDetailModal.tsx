@@ -1,10 +1,7 @@
 import { Button, Col, Modal, Row, Image, Tabs, Tab } from 'react-bootstrap';
-import { DeckInfoTabBasic } from './deckInfoTabs/DeckInfoTabBasic'
 import '../App.css';
 import { Deck } from '../interfaces/deck';
-import { DeckInfoTabPublication } from './deckInfoTabs/DeckInfoTabPublication';
-import { DeckInfoTabArt } from './deckInfoTabs/DeckInfoTabArt';
-import { DeckInfoTabPrint } from './deckInfoTabs/DeckInfoTabPrint';
+import { DeckInfoTab } from './deckInfoTabs/DeckInfoTab';
 import Attributes from "../assets/deck-attributes.json";
 import { Attribute, fieldType, tab } from '../interfaces/attribute';
 
@@ -16,38 +13,38 @@ interface iDeckDetailModal {
 
 }
 
-export function DeckDetailModal({show, onHide, deck} : iDeckDetailModal): JSX.Element {
-    
+export function DeckDetailModal({ show, onHide, deck }: iDeckDetailModal): JSX.Element {
+
     const ATTRIBUTES: Record<string, Attribute> = Attributes as Record<string, Attribute>;
 
     function getAttribute(key: string): Attribute {
         if (Object.keys(ATTRIBUTES).includes(key)) {
             return ATTRIBUTES[key];
         }
-        return {"attribute":"ERROR", "display":"KEY NOT FOUND", "type":fieldType.text, "tab":tab.basicInfo, "default":"", "values":[]};
+        return { "attribute": "ERROR", "display": "KEY NOT FOUND", "type": fieldType.text, "tab": tab.basicInfo, "default": "", "values": [] };
     }
 
-    return <Modal show={show} 
+    return <Modal show={show}
         onHide={onHide}
         size="lg">
         <Modal.Header closeButton>
-          <Modal.Title>{deck.title}</Modal.Title>
+            <Modal.Title>{deck.title}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
             <Row>
                 <Col sm={7}>
                     <Tabs defaultActiveKey="basicinfo">
                         <Tab eventKey="basicinfo" title="Basic Info">
-                            <DeckInfoTabBasic deck={deck} getAttribute={getAttribute}></DeckInfoTabBasic>
+                            <DeckInfoTab tab={tab.basicInfo} deck={deck} getAttribute={getAttribute}></DeckInfoTab>
                         </Tab>
                         <Tab eventKey="art" title="Art">
-                            <DeckInfoTabArt deck={deck} getAttribute={getAttribute}></DeckInfoTabArt>
+                            <DeckInfoTab tab={tab.art} deck={deck} getAttribute={getAttribute}></DeckInfoTab>
                         </Tab>
                         <Tab eventKey="print" title="Print">
-                            <DeckInfoTabPrint deck={deck} getAttribute={getAttribute}></DeckInfoTabPrint>
+                            <DeckInfoTab tab={tab.print} deck={deck} getAttribute={getAttribute}></DeckInfoTab>
                         </Tab>
                         <Tab eventKey="publication" title="Publication">
-                            <DeckInfoTabPublication deck={deck} getAttribute={getAttribute}></DeckInfoTabPublication>
+                            <DeckInfoTab tab={tab.publication} deck={deck} getAttribute={getAttribute}></DeckInfoTab>
                         </Tab>
                     </Tabs>
                 </Col>
@@ -57,9 +54,9 @@ export function DeckDetailModal({show, onHide, deck} : iDeckDetailModal): JSX.El
             </Row>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={onHide}>
-            Close
-          </Button>
+            <Button variant="secondary" onClick={onHide}>
+                Close
+            </Button>
         </Modal.Footer>
     </Modal>;
 }
