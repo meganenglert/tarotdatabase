@@ -51,6 +51,7 @@ export function AddDeck({ decks, setDecks, showAdd, setShowAdd }: iAddDeck): JSX
 
     function handleChange(ev: React.ChangeEvent<HTMLFormElement>): void {
         setNewDeck({ ...newDeck, [ev.target.name]: ev.target.value});
+        console.log(ev.target.name);
     } 
     function handleChangeMulti(attr: string, values: string[]): void {
         setNewDeck({ ...newDeck, [attr]: values});

@@ -1,8 +1,6 @@
 import '../../App.css';
 import { Attribute, fieldType } from '../../interfaces/attribute';
 
-
-
 interface iInfoTableRow {
     attribute: Attribute,
     value: string

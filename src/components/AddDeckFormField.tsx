@@ -29,7 +29,7 @@ export function AddDeckFormField({ attribute, handleChange, handleChangeMulti }:
                     <span className="attribute-label">{attribute.display}</span>
                 </Form.Label>
                 <Col sm="10">
-                    <Form.Select aria-label={attribute.attribute + "Select"}>
+                    <Form.Select aria-label={attribute.attribute + "Select"} name={attribute.attribute}>
                         {attribute.values.map(valueName => {
                             return <option key={valueName} value={valueName}>{valueName}</option>;
                         })}
