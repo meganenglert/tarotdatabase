@@ -1,14 +1,17 @@
 export interface Attribute {
+    attribute: string;
     display: string;
     type: fieldType;
     tab: tab;
-    values?: string[];
+    default: string;
+    values: string[];
 }
 
 export enum fieldType {
     text = "text",
     singleSelect = "single-select",
-    multiSelect = "multi-select"
+    multiSelect = "multi-select",
+    date = "date"
 }
 
 export enum tab {

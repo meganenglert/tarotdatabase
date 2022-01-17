@@ -5,3 +5,24 @@
 #bodyBackground {
   background-color: cadetblue;
 }
+
+Button {
+  margin-top: 1em;
+}
+
+Accordion.Item {
+  margin-top: 0em;
+}
+
+.multiselect {
+  margin-top: .5em;
+  margin-bottom: .5em;
+}
+
+.attribute-label {
+  font-size: medium;
+}
+
+.not-multi-row {
+  height: 2em;
+}
